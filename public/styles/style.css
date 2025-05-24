@@ -78,6 +78,7 @@ nav{
     height: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    overflow: hidden;
 }
 
 #bgBox{
@@ -92,11 +93,44 @@ nav{
 
 #txtBox{
     /* backdrop-filter: blur(10px); */
+    display: grid;
+    grid-template-rows: 300px auto;
+    overflow: hidden;
+}
+
+#hobbits{
+    width: 100%;
+}
+
+#hobbits ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+#hobbits li{
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+    padding: 20px;
+}
+
+.carImg{
+    width: 100%;
+    height: 220px;
+    border: 3px solid #F8F3D9;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px black;
 }
 
 #slogan{
     width: 100%;
     backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #sloganTxt{
@@ -114,7 +148,7 @@ nav{
     display: inline-block;
     color:#F8F3D9 ;
     font-family: "HobbitFont";
-    font-size: 68px;
+    font-size: 60px;
     font-weight: 700;
     text-align: center;
     user-select: none;
@@ -125,6 +159,6 @@ nav{
     width: 75%;
     height: 500px;
     padding: 20px;
-    background-color: #F8F3D9;
+     background-image: url("../images/green-Dragon.jpg");
     mask: radial-gradient(40px at 40px 40px,#0000 98%,#000) -40px -40px;
 }

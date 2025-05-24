@@ -10,7 +10,6 @@ const menuBtn = document.querySelector(`#menuCard`);
 const contactBtn = document.querySelector(`#contactCard`);
 
 
-
 function landingPage(){
     const contentBox = document.createElement(`div`);
     contentBox.setAttribute("id","contentBox");
@@ -27,8 +26,12 @@ function landingPage(){
     content.append(contentBox);
 
     const slogan = document.createElement(`div`);
+    const carrousel = document.createElement(`div`);
+    carrousel.setAttribute("id","hobbits");
+
     slogan.setAttribute("id","slogan");
-    bgBox.appendChild(slogan);
+    txtBox.appendChild(slogan);
+    txtBox.appendChild(carrousel);
 
     slogan.innerHTML=`
     <div id="sloganTxt">
@@ -48,6 +51,15 @@ function landingPage(){
         </defs>
     </svg>`
 
+    carrousel.innerHTML = `
+    <ul>
+        <li><img class="carImg" src="../images/carr2.jpg"></li>
+        <li><img class="carImg" src="../images/carr7.jpg"></li>
+        <li><img class="carImg" src="../images/carr8.jpg"></li>
+        <li><img class="carImg" src="../images/carr6.jpg"></li>
+        <li><img class="carImg" src="../images/carr4.jpg"></li>
+    </ul>`
+
     const elts = {
         text1: document.getElementById("text1"),
         text2: document.getElementById("text2")
@@ -55,7 +67,7 @@ function landingPage(){
 
     const texts = [
         "You can drink your fancy ales",
-        "you can drink them by the flagon",
+        "and drink them by the flagon",
         "but the only brew ",
         "for the brave and true",
         "comes from the Green Dragon!",
