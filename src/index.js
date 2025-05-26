@@ -52,7 +52,7 @@ function landingPage(){
     </svg>`
 
     carrousel.innerHTML = `
-    <ul>
+    <ul class="scrollList">
         <li><img class="carImg" src="../images/carr2.jpg"></li>
         <li><img class="carImg" src="../images/carr7.jpg"></li>
         <li><img class="carImg" src="../images/carr8.jpg"></li>
