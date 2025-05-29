@@ -152,7 +152,11 @@ homeBtn.addEventListener("click",() =>{
 
 menuBtn.addEventListener("click",() =>{
     content.innerHTML="";
-    menu();
+    content.setAttribute(`class`,`goAway`);
+    
+    setTimeout(() => {
+        menu();
+    }, 100);
 });
 
 contactBtn.addEventListener("click",() =>{

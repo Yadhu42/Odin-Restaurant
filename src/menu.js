@@ -1,5 +1,9 @@
 function menu(){
     const content = document.querySelector(`#content`);
+    content.removeAttribute(`class`,`goAway`);
+    const overlay = document.createElement(`div`);
+    overlay.setAttribute(`class`,`darkOver`);
+    content.appendChild(overlay);
 
     const menuDiv = document.createElement(`div`);
     menuDiv.setAttribute(`id`,`menuDiv`);
@@ -8,7 +12,7 @@ function menu(){
     para.innerText = "MENU PAGE";
     menuDiv.appendChild(para);
 
-    content.append(menuDiv);
+    content.appendChild(menuDiv);
 }
 
 export {menu}

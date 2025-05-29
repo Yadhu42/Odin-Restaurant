@@ -21,6 +21,7 @@ body{
     height: 100vh;
     background-color: #504b38;
     background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+    animation: 1s linear fadeIn;
 }
 
 .head{
@@ -65,12 +66,61 @@ nav{
     font-size: 54px;
 }
 
+.darkOver{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+    animation: 0.3s fadeInBlack;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
 #content{
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 0.5;
+    }
+    
+}
+
+@keyframes fadeInBlack {
+    from {
+        opacity: 0.5;
+    }
+    to{
+        opacity: 0;
+    }
+    
+}
+
+.goAway{
+    background-color: #000;
+    animation: 1s fadeOut;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
 #contentBox{
@@ -221,6 +271,9 @@ li::scroll-marker:target-current {
     width: 75%;
     height: 500px;
     padding: 20px;
-     background-image: url("../images/green-Dragon.jpg");
+    background-image: url("../images/Menu-Page.jpg");
+    background-size: cover;
+    background-position: 15% 15%;
     mask: radial-gradient(40px at 40px 40px,#0000 98%,#000) -40px -40px;
+    animation: 0.5s ease-in fadeIn;
 }
