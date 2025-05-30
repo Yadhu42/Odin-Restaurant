@@ -161,5 +161,10 @@ menuBtn.addEventListener("click",() =>{
 
 contactBtn.addEventListener("click",() =>{
     content.innerHTML="";
-    contact();
+    content.setAttribute(`class`,`goAway`);
+    
+    setTimeout(() => {
+        contact();
+    }, 100);
+
 });

@@ -54,7 +54,7 @@ nav{
     font-family:'MiddleEarthFont';
 }
 
-.logoTitle h1,p{
+.logoTitle h1, .logoTitle p{
     margin: 0;
 }
 
@@ -267,13 +267,63 @@ li::scroll-marker:target-current {
 }
 
 #menuDiv{
+    margin: 30px 0;
     position: relative;
-    width: 75%;
-    height: 500px;
-    padding: 20px;
-    background-image: url("../images/Menu-Page.jpg");
-    background-size: cover;
-    background-position: 15% 15%;
+    padding: 40px 20px;
+    background-color: #626F47;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
     mask: radial-gradient(40px at 40px 40px,#0000 98%,#000) -40px -40px;
     animation: 0.5s ease-in fadeIn;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.menuCardTxt{
+    padding: 15px;
+    display: grid;
+    grid-auto-rows: auto;
+    border: 3px solid #F8F3D9;
+    border-radius: 10px;
+    color: #F8F3D9;
+    backdrop-filter: brightness(70%);
+}
+
+.menuImg{
+    display: grid;
+    grid-auto-rows: auto;
+    padding-left: 15px;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.menuImg img{
+    width: 450px;
+    border: 3px solid #F8F3D9;
+    border-radius: 10px;
+}
+
+.meal{
+    display: flex;
+    flex-direction: column;
+    font-family: "HobbitFont";
+}
+
+.mealTitle{
+    margin: 0;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.mealPairing{
+    margin: 0;
+    font-size: 30px;
+}
+
+.mealItem{
+    margin: 0;
+    font-size: 24px;
+}
+
+.mealList{
+    list-style: none;
 }
