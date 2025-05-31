@@ -12,10 +12,25 @@ const contactBtn = document.querySelector(`#contactCard`);
 
 function landingPage(){
     const contentBox = document.createElement(`div`);
+    content.removeAttribute(`class`,`goAway`);
+    const overlay = document.createElement(`div`);
+    overlay.setAttribute(`class`,`darkOver`);
+    content.appendChild(overlay);
     contentBox.setAttribute("id","contentBox");
 
     const bgBox = document.createElement(`div`);
     bgBox.setAttribute("id","bgBox");
+
+    const hero = document.createElement(`div`);
+    hero.setAttribute(`class`,`hero`);
+
+    hero.innerHTML = `
+            <p class="typeUp big">Bywater’s Pride & the Shire’s Heartiest Hearth!</p>
+            <p class="typeUp">Come wet your whistle where good cheer never runs dry! Nestled just ‘round the bend from Hobbiton</p>
+            <p class="typeUp">Don’t miss our <span> Harvest Ale Festival</span> this coming Afterlithe – <span> free pipeweed pouch with every third pint! </span></p>
+            <p class="typeUp">-“There's no place like the Green Dragon for a tale, a tune, and a tankard.”</p>`
+
+    bgBox.appendChild(hero);
 
     const txtBox = document.createElement(`div`);
     txtBox.setAttribute("id","txtBox");
@@ -147,24 +162,29 @@ function landingPage(){
 landingPage();
 
 homeBtn.addEventListener("click",() =>{
+    content.setAttribute(`class`,`goAway`);
     content.innerHTML="";
+    
+    setTimeout(() => {
+       landingPage();
+    }, 200);
 });
 
 menuBtn.addEventListener("click",() =>{
-    content.innerHTML="";
     content.setAttribute(`class`,`goAway`);
+    content.innerHTML="";
     
     setTimeout(() => {
         menu();
-    }, 100);
+    }, 200);
 });
 
 contactBtn.addEventListener("click",() =>{
-    content.innerHTML="";
     content.setAttribute(`class`,`goAway`);
+    content.innerHTML="";
     
     setTimeout(() => {
         contact();
-    }, 100);
+    }, 200);
 
 });

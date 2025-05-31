@@ -18,7 +18,7 @@ function menu(){
             <p class="mealPairing">paired with meats, jams, and coffee or tea</p>
             <ul class="mealList">
                 <li class="mealItem">Hobbit hash</li>
-                <li class="mealItem">Ham omelet made with curry spices, onions, and tomatoes</li>
+                <li class="mealItem">Ham omelet made with curry spices and tomatoes</li>
             </ul>`
     const meal2 = document.createElement(`div`);
     meal2.setAttribute(`class`,`meal`);
@@ -26,7 +26,7 @@ function menu(){
             <p class="mealTitle">Second Breakfast</p>
             <p class="mealPairing">paired with pastries, fruits and coffee or tea</p>
             <ul class="mealList">
-                <li class="mealItem">Strawberry French toast with a side of sausage</li>
+                <li class="mealItem">Strawberry French toast with sausage</li>
                 <li class="mealItem">Scones and clotted cream</li>
             </ul>`
     const meal3 = document.createElement(`div`);
@@ -63,7 +63,7 @@ function menu(){
     meal6.setAttribute(`class`,`meal`);
     meal6.innerHTML=`
             <p class="mealTitle">Dinner</p>
-            <p class="mealPairing">Paired with assortments of bread, cheese, and malty dark beer</p>
+            <p class="mealPairing">Paired with bread, cheese, and malty dark beer</p>
             <ul class="mealList">
                 <li class="mealItem">Spiced beef and roasted vegetables</li>
                 <li class="mealItem">Chicken pies with wine and mushrooms</li>
@@ -76,7 +76,7 @@ function menu(){
             <p class="mealPairing">Paired with meats, bread, cheeses, and ale</p>
             <ul class="mealList">
                 <li class="mealItem">Pork pie</li>
-                <li class="mealItem">Mushroom soup served with fresh herbs and hard-boiled eggs</li>
+                <li class="mealItem">Mushroom soup with fresh herbs</li>
             </ul>`
 
     textBox.appendChild(meal1);

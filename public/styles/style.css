@@ -8,6 +8,11 @@
     src: url('../fonts/HobbitonBrushhandhobbitonBrush-WygA.woff2') format('woff2');
 }
 
+@font-face {
+    font-family:'MenuFont';
+    src: url('../fonts/QuickquillRegular-maqm.woff2') format('woff2');
+}
+
 :root{
     box-sizing: border-box;
 }
@@ -46,12 +51,33 @@ nav{
     gap: 10px;
 }
 
+.navButton{
+    margin: 10px;
+    padding: 10px;
+    width: 130px;
+    border: 3px solid #e6b855;
+    border-radius: 5px;
+    font-family: "MiddleEarthFont";
+    font-size: larger;
+    font-weight: 800;
+    background-color: #626F47;
+    color: #F8F3D9;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navButton:hover{
+    color: #626F47;
+    background-color: #F8F3D9;
+}
+
 .logo{
     color: #F8F3D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family:'MiddleEarthFont';
+    font-family: "HobbitFont";
+    line-height: 1;
 }
 
 .logoTitle h1, .logoTitle p{
@@ -71,7 +97,7 @@ nav{
     top: 140px;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 597px;
     background-color: #000;
     animation: 0.3s fadeInBlack;
     animation-timing-function: ease-in;
@@ -129,6 +155,7 @@ nav{
     display: grid;
     grid-template-columns: 2fr 1fr;
     overflow: hidden;
+    animation: 0.5s ease-in fadeIn;
 }
 
 #bgBox{
@@ -139,6 +166,35 @@ nav{
     align-items: center;
     justify-content: center;
     box-shadow: 3px 1px 3px black;
+}
+
+.hero{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    border: 3px solid #F8F3D9;
+    border-radius: 10px;
+    gap: 30px;
+    backdrop-filter: brightness(40%);
+}
+
+.typeUp{
+    margin: 0;
+    color:#F8F3D9;
+    font-family: "MiddleEarthFont";
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.typeUp span{
+    color: #e6b855;
+}
+
+.big{
+    font-size: 45px;
 }
 
 #txtBox{
@@ -286,44 +342,99 @@ li::scroll-marker:target-current {
     border-radius: 10px;
     color: #F8F3D9;
     backdrop-filter: brightness(70%);
+    box-shadow: 3px 3px 4px black;
 }
 
 .menuImg{
     display: grid;
-    grid-auto-rows: auto;
+    grid-auto-rows: 380px;
     padding-left: 15px;
     justify-content: space-between;
     align-items:center;
 }
 
 .menuImg img{
-    width: 450px;
+    width: 300px;
     border: 3px solid #F8F3D9;
     border-radius: 10px;
+    box-shadow: 3px 3px 4px black;
 }
 
 .meal{
     display: flex;
     flex-direction: column;
-    font-family: "HobbitFont";
 }
 
 .mealTitle{
     margin: 0;
     font-size: 40px;
     text-decoration: underline;
+    font-family: "HobbitFont";
+    line-height: 0.7;
 }
 
 .mealPairing{
     margin: 0;
-    font-size: 30px;
+    font-size: 20px;
+    font-family: "MiddleEarthFont";
+    font-weight: 700;
 }
 
 .mealItem{
     margin: 0;
     font-size: 24px;
+    font-family: "MenuFont";
+    font-weight: 600;
+    padding: 10px;
 }
 
 .mealList{
     list-style: none;
+}
+
+.contact{
+    display: grid;
+    grid-auto-rows: 150px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #F8F3D9;
+    width: 50%;
+    height: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: brightness(70%);
+    color: #F8F3D9;
+    animation: 0.5s ease-in fadeIn;
+}
+
+.userName{
+    margin: 0;
+    width: 450px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    font-family: "MiddleEarthFont";
+    font-size: 36px;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+}
+
+.suggest{
+    text-align: left;
+    border-radius: 5px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
 }
